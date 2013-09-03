@@ -16,10 +16,11 @@ CMD="cd $WORKDIR && node app"
 PIDFILE="/var/run/$NAME.pid"
 LOGFILE="/var/log/$NAME.log"
 
-DB_HOST=mysql.roadrunners.in:3306
+DB_HOST=mysql.roadrunners.in
 DB_USERNAME=roadrunner
 DB_PASSWORD='ryv6ZUeQXPdwje66UDZv'
 DB_NAME=node_url_shortener
+DB_LOGGING=false
 REDIS_HOST=redis.roadrunners.in
 NODE_ENV=production
 
@@ -44,6 +45,7 @@ case "$1" in
     export DB_USERNAME
     export DB_PASSWORD
     export DB_NAME
+    export DB_LOGGING
     export REDIS_HOST
     export NODE_ENV
     /bin/su -m -l $USER -c "$CMD" > $LOGFILE 2>&1 &

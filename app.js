@@ -3,7 +3,7 @@ var _ = require('lodash')
   , cluster = require('cluster')
   , os = require('os')
   , numCPUs = os.cpus().length
-  , totalInstances = config.cluster.instances || (numCPUs - 1)
+  , totalInstances = config.cluster.instances || numCPUs
 
 require('remedial')
 

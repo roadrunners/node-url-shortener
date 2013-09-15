@@ -3,5 +3,5 @@ module.exports = {
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   host: process.env.DB_HOST,
-  logging: process.env.DB_LOGGING === 'false' ? false : console.log
+  logging: process.env.DB_LOGGING === 'false' ? false : undefined
 }
